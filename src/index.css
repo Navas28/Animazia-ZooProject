@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Alegreya Sans SC;
+    src: url("./assets/fonts/AlegreyaSansSC-Regular.ttf");
+}
+@font-face {
+    font-family:Sansita ;
+    src: url("./assets/fonts/Sansita-Regular.ttf");
+}
+@font-face {
+    font-family: Molengo;
+    src: url("./assets/fonts/Molengo-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+body{
+    background-color: #14281d;
+}
+
+
+@theme{
+    --font-head:Alegreya Sans SC, "sans-serif";
+    --font-subhead: Sansita,serif;
+    --font-para: Molengo,sans-serif;
+    --color-customeGreen: #14281d;
+    --color-customeWhite: #fffcdc;
+    --color-darkPurple: #200116;
+    --color-blackBean: #2D0605;
+}

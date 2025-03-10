@@ -6,6 +6,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import About from "./components/About";
 import Features from "./components/Features";
+import Mission from "./components/Mission";
+import 'animate.css';
 
 
 const App = () => {
@@ -20,6 +22,7 @@ const App = () => {
             <Header />
             <About/>
             <Features/>
+            <Mission/>
         </div>
     );
 };

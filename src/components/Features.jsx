@@ -36,10 +36,10 @@ const Features = () => {
                     <div className="mt-5 sm:mt-10 lg:mt-0">
                         <div className=" xl:mb-[160px]">
                             <div className="space-y-2 md:space-y-4">
-                                <h2 className="font-bold text-3xl lg:text-4xl text-offWhite font-subhead">
+                                <h2 className="font-bold text-3xl lg:text-4xl text-customoff font-subhead">
                                     Explore Our Unique Features
                                 </h2>
-                                <p className="text-offWhite font-para">
+                                <p className="text-customoff font-para">
                                     we offer a variety of exciting features designed to enhance your experience and connect
                                     you with the animal kingdom. Explore everything we have to offer during your visit!
                                 </p>
@@ -48,7 +48,7 @@ const Features = () => {
                             <ul className="space-y-2 mt-3 sm:space-y-4 xl:mt-9">
                                 {features.map((feature, index) => (
                                     <li key={index} className="flex gap-x-3">
-                                        <span className="mt-0.5 size-5 flex justify-center items-center rounded-full text-lightGreen font-para">
+                                        <span className="mt-0.5 size-5 flex justify-center items-center rounded-full text-customLightGreen font-para">
                                             <svg
                                                 className="shrink-0 size-3.5"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ const Features = () => {
                                             </svg>
                                         </span>
                                         <div className="grow">
-                                            <span className="text-sm sm:text-base font-bold text-lightGreen">
+                                            <span className="text-sm sm:text-base font-bold text-customLightGreen">
                                                 {feature}
                                             </span>
                                         </div>

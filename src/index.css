@@ -10,12 +10,12 @@
     font-family: Molengo;
     src: url("./assets/fonts/Molengo-Regular.ttf");
 }
-
 @import "tailwindcss";
 
 body{
     background-color: #14281d;
 }
+
 
 
 @theme{
@@ -24,10 +24,10 @@ body{
     --font-para: Molengo,sans-serif;
     --color-customeGreen: #14281d;
     --color-customeWhite: #fffcdc;
-    --color-offWhite: #F5F5DC;
-    --color-mediumGreen: #214e34;
-    --color-lightGreen: #ACCF60;
-    --color-lightOrange: #f2c94c;
+    --color-customoff: #F5F5DC;
+    --color-customMediumGreen: #214e34;
+    --color-customLightGreen: #ACCF60;
+    --color-customLightOrange: #f2c94c;
 }
 
 /*  #F5F5DC */

@@ -16,7 +16,7 @@ const Mission = () => {
         <div>
              <h1
                 className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold mb-8"
-                data-aos="fade-down"  id="Features"
+                data-aos="fade-down"  id="Mission"
             >
                 Programs
             </h1>
@@ -32,7 +32,7 @@ const Mission = () => {
             pagination={{
                 clickable: true,
             }}
-            modules={[Mousewheel, Pagination,Autoplay]}
+            modules={[Mousewheel, Pagination, Autoplay]}
             className="mySwiper  w-[95%] max-h-[500px] sm:max-h-[750px] h-full rounded-xl" data-aos="fade-down"
         >
             <SwiperSlide className="text-center flex justify-center items-center ">
@@ -76,8 +76,8 @@ const Mission = () => {
                 <div className="absolute  inset-0 flex  justify-start items-start text-customeGreen  p-8">
                     <span className="bg-customLightOrange text-black rounded px-2 py-1 font-subhead">22-07-2024</span>
                 </div>
-                <div className="absolute w-full sm:max-w-[600px]  inset-0 flex flex-col justify-end items-start text-white sm:p-15 px-2 ml-2 sm:ml-0 sm:px-0 ">
-                    <h2 className="text-xl sm:text-3xl font-bold mb-2 bg-black/40 rounded-lg font-subhead px-7">Sustainable Land Protection on Hills</h2>
+                <div className="absolute w-full sm:max-w-[600px]  inset-0 flex flex-col justify-end items-start text-white sm:p-15 px-2 sm:px-8">
+                    <h2 className="text-xl sm:text-3xl font-bold mb-2 bg-black/40 rounded-lg font-subhead px-7">Sustainable Land Protection on Hills and Soil</h2>
                     <p className="text-lg font-para">
                     Effective land protection on hills is essential to prevent soil erosion and landslides caused by heavy rainfall. Implementing methods such as afforestation, terracing, and advanced drainage systems helps maintain soil integrity and preserve the natural landscape.
                     </p>

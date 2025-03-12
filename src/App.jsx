@@ -8,6 +8,8 @@ import About from "./components/About";
 import Features from "./components/Features";
 import Mission from "./components/Mission";
 import 'animate.css';
+import Team from "./components/Team";
+import Testimonials from "./components/Testimonials";
 
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
             <About/>
             <Features/>
             <Mission/>
+            <Team/>
+            <Testimonials/>
         </div>
     );
 };

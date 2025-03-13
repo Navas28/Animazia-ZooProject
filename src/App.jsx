@@ -10,6 +10,7 @@ import Mission from "./components/Mission";
 import 'animate.css';
 import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
+import Booking from "./components/Booking";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
             <Mission/>
             <Team/>
             <Testimonials/>
+            <Booking/>
         </div>
     );
 };

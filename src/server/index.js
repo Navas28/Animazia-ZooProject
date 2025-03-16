@@ -1,6 +1,7 @@
-import express from "express";
-import cors from "cors";
-import Stripe from "stripe";
+const express = require("express");
+const cors = require("cors");
+const Stripe = require("stripe");
+
 
 const stripe = new Stripe(
     "sk_test_51R290bB6eXsSQ3XyvI4ZZDMdFDFz9wiHHpmLRFH9AldQkZbZdfoINhybSriQONaRSPirinNKaiPIng9ocizZT48P00GPUU8uVA"

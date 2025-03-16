@@ -4,7 +4,7 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
 const Booking = () => {
     const buyFunction = async (bookingType) => {
-        let response = await axios.post("http://localhost:3000/payment", { bookingType });
+        let response = await axios.post("http://localhost:3200/payment", { bookingType });
 
         if (response && response.status === 200) {
             window.location.href = response.data.url;
@@ -20,7 +20,7 @@ const Booking = () => {
             </h1>
             <div class="sm:flex sm:flex-col sm:align-center p-10">
                 <div class="mt-12 space-y-3 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 md:max-w-[1600px] md:mx-auto xl:grid-cols-4">
-                    <div class="bg-customeWhite rounded-xl hover:scale-102 duration-500 ease-in-out">
+                    <div class="bg-white rounded-xl hover:scale-102 duration-500 ease-in-out">
                         <div class="p-6">
                             <h2 class="text-xl sm:text-3xl  leading-6 font-bold text-customMediumGreen">Standard</h2>
                             <p class="mt-4">
@@ -72,7 +72,7 @@ const Booking = () => {
                         </div>
                     </div>
 
-                    <div class="bg-customeWhite rounded-xl hover:scale-102 duration-500 ease-in-out">
+                    <div class="bg-white rounded-xl hover:scale-102 duration-500 ease-in-out">
                         <div class="p-6">
                             <h2 class="text-xl sm:text-3xl leading-6 font-bold text-customMediumGreen">Premium</h2>
                             <p class="mt-4">
@@ -124,7 +124,7 @@ const Booking = () => {
                         </div>
                     </div>
 
-                    <div class="bg-customeWhite rounded-xl hover:scale-102 duration-500 ease-in-out">
+                    <div class="bg-white rounded-xl hover:scale-102 duration-500 ease-in-out">
                         <div class="p-6">
                             <h2 class="text-xl sm:text-3xl leading-6 font-bold text-customMediumGreen">VIP</h2>
                             <p class="mt-4">
@@ -175,7 +175,7 @@ const Booking = () => {
                         </div>
                     </div>
 
-                    <div class="bg-customeWhite rounded-xl hover:scale-102 duration-500 ease-in-out">
+                    <div class="bg-white rounded-xl hover:scale-102 duration-500 ease-in-out">
                         <div class="p-6">
                             <h2 class="text-xl sm:text-3xl leading-6 font-bold text-customMediumGreen">Deluxe</h2>
                             <p class="mt-4">

@@ -4,7 +4,6 @@ import "keen-slider/keen-slider.min.css";
 import forestLogo from "../assets/images/forest-logo.png";
 import govLogo from "../assets/images/india-logo.png";
 import minister from "../assets/images/minister-1.jpg";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { TiArrowLeftOutline, TiArrowRightOutline } from "react-icons/ti";
 
 const Testimonials = () => {
@@ -101,7 +100,7 @@ const Testimonials = () => {
         },
     ];
     return (
-        <section className="">
+        <section>
             <h1
                 className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold"
                 data-aos="fade-down"
@@ -109,15 +108,15 @@ const Testimonials = () => {
             >
                 Reviews
             </h1>
-            <div class="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-                <div class="text-center lg:mx-auto lg:w-3/5">
+            <div className="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                <div className="text-center lg:mx-auto lg:w-3/5">
                     <div className="flex justify-center items-center">
                         <img data-aos="zoom-in" className="h-50 w-65" src={forestLogo} alt="" />
                         <img data-aos="zoom-in" className="h-30 w-35" src={govLogo} alt="" />
                     </div>
-                    <div class="mt-6 lg:mt-10" data-aos="fade-down">
-                        <p class="relative text-xl sm:text-2xl md:text-3xl md:leading-normal font-medium">
-                            <span class="relative text-customeWhite font-para">
+                    <div className="mt-6 lg:mt-10" data-aos="fade-down">
+                        <p className="relative text-xl sm:text-2xl md:text-3xl md:leading-normal font-medium">
+                            <span className="relative text-customeWhite font-para">
                                 " Remarkable progress has been made in saving wildlife and protecting endangered species.
                                 The dedication to preserving natural habitats and ensuring the well-being of animals is
                                 truly inspiring. These efforts set an example of commitment to biodiversity and a
@@ -125,11 +124,11 @@ const Testimonials = () => {
                             </span>
                         </p>
                     </div>
-                    <footer class="mt-6 flex justify-center" data-aos="fade-down">
+                    <footer className="mt-6 flex justify-center" data-aos="fade-down">
                         <img className="h-20 w-30 rounded-xl" src={minister} alt="" />
-                        <div class="ml-2 font-semibold font-subhead text-customeWhite tracking-wide">
+                        <div className="ml-2 font-semibold font-subhead text-customeWhite tracking-wide">
                             Bhupender Yadav
-                            <div class="text-sm text-customLightOrange font-para">
+                            <div className="text-sm text-customLightOrange font-para">
                                 Minister of Environment and <br /> Forest India
                             </div>
                         </div>

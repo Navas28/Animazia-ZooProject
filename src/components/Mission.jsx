@@ -26,7 +26,6 @@ const Mission = () => {
                 delay: 3000,
                 disableOnInteraction: false,
             }}
-            loop={true}
             slidesPerView={1}
             mousewheel={true}
             pagination={{

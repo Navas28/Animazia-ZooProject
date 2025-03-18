@@ -1,16 +1,18 @@
 const express = require("express");
 const cors = require("cors");
+const mongoose = require("mongoose");
 const Stripe = require("stripe");
+require("dotenv").config();
 
-
-const stripe = new Stripe(
-    "sk_test_51R290bB6eXsSQ3XyvI4ZZDMdFDFz9wiHHpmLRFH9AldQkZbZdfoINhybSriQONaRSPirinNKaiPIng9ocizZT48P00GPUU8uVA"
-);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
-app.use(cors());
-app.use(express.json()); // Middleware 
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(express.json()); // Middleware
+
+//   Stripe Payment Integration
 
 app.post("/payment", async (req, res) => {
     const { bookingType } = req.body;
@@ -52,7 +54,31 @@ app.post("/payment", async (req, res) => {
     }
 });
 
-app.listen(3200, () => {
-    console.log("Server Running on Port 3200");
+//    Contact Form Data Storing Using Mongo DB
+
+mongoose
+    .connect(process.env.MONGODB_URI)
+    .then(() => console.log("Mongo Db Connected"))
+    .catch((err) => console.log("Mongo Db Connection Error", err));
+
+const contactShcema = new mongoose.Schema({
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    message: { type: String, required: true },
 });
 
+const Contact = mongoose.model("contact", contactShcema);
+
+app.post("/contact", async (req, res) => {
+    try {
+        const newContact = new Contact(req.body);
+        await newContact.save();
+        res.status(201).json({ success: true, message: "Contact Form Submitted Successfully" });
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server Running on Port ${PORT}`);
+});

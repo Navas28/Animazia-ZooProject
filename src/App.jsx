@@ -14,6 +14,7 @@ import Testimonials from "./components/Testimonials";
 import Booking from "./components/Booking";
 import Success from "./components/payment/Success";
 import Cancel from "./components/payment/Cancel";
+import ContactForm from "./components/ContactForm";
 
 const App = () => {
     useEffect(() => {
@@ -36,6 +37,7 @@ const App = () => {
                             <Team />
                             <Testimonials />
                             <Booking />
+                            <ContactForm/>
                         </>
                     }
                 />

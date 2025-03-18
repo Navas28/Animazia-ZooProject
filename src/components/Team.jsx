@@ -8,9 +8,9 @@ import team6 from "../assets/images/team-7.jpg";
 
 const Team = () => {
     return (
-        <section class="py-10 sm:py-16 lg:py-24">
-            <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                <div class="max-w-2xl mx-auto text-center">
+        <section className="py-10 sm:py-16 lg:py-24">
+            <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                <div className="max-w-2xl mx-auto text-center">
                     <h1
                         className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold mb-8"
                         data-aos="fade-down"
@@ -20,62 +20,62 @@ const Team = () => {
                     </h1>
                 </div>
 
-                <div class="grid grid-cols-2 mt-8 text-center sm:mt-16 lg:mt-20 sm:grid-cols-4 gap-y-8 lg:grid-cols-5 gap-x-0 font-para">
+                <div className="grid grid-cols-2 mt-8 text-center sm:mt-16 lg:mt-20 sm:grid-cols-4 gap-y-8 lg:grid-cols-5 gap-x-0 font-para">
                     <div>
-                        <img class="object-cover mx-auto rounded-lg w-34 h-34" src={team1} alt="" data-aos="zoom-in" />
-                        <p class="mt-8 text-lg  leading-tight text-customeWhite tracking-wider font-semibold">
+                        <img className="object-cover mx-auto rounded-lg w-34 h-34" src={team1} alt="" data-aos="zoom-in" />
+                        <p className="mt-8 text-lg  leading-tight text-customeWhite tracking-wider font-semibold">
                             Dr. Meera Nair
                         </p>
-                        <p class="mt-1 text-base leading-tight text-customLightOrange">Wildlife Veterinarian</p>
+                        <p className="mt-1 text-base leading-tight text-customLightOrange">Wildlife Veterinarian</p>
                     </div>
 
-                    <div class="hidden lg:block"></div>
+                    <div className="hidden lg:block"></div>
 
                     <div>
-                        <img class="object-cover mx-auto rounded-lg w-34 h-34" src={team5} alt="" data-aos="zoom-in" />
-                        <p class="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">Priya Iyer</p>
-                        <p class="mt-1 text-base leading-tight text-customLightOrange">Chairman</p>
+                        <img className="object-cover mx-auto rounded-lg w-34 h-34" src={team5} alt="" data-aos="zoom-in" />
+                        <p className="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">Priya Iyer</p>
+                        <p className="mt-1 text-base leading-tight text-customLightOrange">Chairman</p>
                     </div>
 
-                    <div class="hidden lg:block"></div>
+                    <div className="hidden lg:block"></div>
 
                     <div>
-                        <img class="object-cover mx-auto rounded-lg w-34 h-34" src={team2} alt="" data-aos="zoom-in" />
-                        <p class="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">
+                        <img className="object-cover mx-auto rounded-lg w-34 h-34" src={team2} alt="" data-aos="zoom-in" />
+                        <p className="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">
                             Arjun Sharma
                         </p>
-                        <p class="mt-1 text-base leading-tight text-customLightOrange">Conservation Biologist</p>
+                        <p className="mt-1 text-base leading-tight text-customLightOrange">Conservation Biologist</p>
                     </div>
 
-                    <div class="hidden lg:block"></div>
+                    <div className="hidden lg:block"></div>
 
                     <div>
-                        <img class="object-cover mx-auto rounded-lg w-34 h-34" src={team3} alt="" data-aos="zoom-in" />
-                        <p class="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">Rohan Gupta</p>
-                        <p class="mt-1 text-base leading-tight text-customLightOrange">Animal Behavior Specialist</p>
+                        <img className="object-cover mx-auto rounded-lg w-34 h-34" src={team3} alt="" data-aos="zoom-in" />
+                        <p className="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">Rohan Gupta</p>
+                        <p className="mt-1 text-base leading-tight text-customLightOrange">Animal Behavior Specialist</p>
                     </div>
 
-                    <div class="hidden lg:block"></div>
+                    <div className="hidden lg:block"></div>
 
                     <div>
-                        <img class="object-cover mx-auto rounded-lg w-34 h-34" src={team4} alt="" data-aos="zoom-in" />
-                        <p class="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">Kabir Das</p>
-                        <p class="mt-1 text-base leading-tight text-customLightOrange">Volunteer Manager</p>
+                        <img className="object-cover mx-auto rounded-lg w-34 h-34" src={team4} alt="" data-aos="zoom-in" />
+                        <p className="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">Kabir Das</p>
+                        <p className="mt-1 text-base leading-tight text-customLightOrange">Volunteer Manager</p>
                     </div>
 
-                    <div class="hidden lg:block"></div>
-                    <div class="hidden lg:block"></div>
-                    <div class="hidden lg:block"></div>
+                    <div className="hidden lg:block"></div>
+                    <div className="hidden lg:block"></div>
+                    <div className="hidden lg:block"></div>
 
                     <div>
-                        <img class="object-cover mx-auto rounded-lg w-34 h-34" src={team6} alt="" data-aos="zoom-in" />
-                        <p class="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">
+                        <img className="object-cover mx-auto rounded-lg w-34 h-34" src={team6} alt="" data-aos="zoom-in" />
+                        <p className="mt-8 text-lg font-semibold leading-tight text-customeWhite tracking-wider">
                             Anjali Deshmukh
                         </p>
-                        <p class="mt-1 text-base leading-tight text-customLightOrange">Fundraising Coordinator</p>
+                        <p className="mt-1 text-base leading-tight text-customLightOrange">Fundraising Coordinator</p>
                     </div>
 
-                    <div class="hidden lg:block"></div>
+                    <div className="hidden lg:block"></div>
                 </div>
             </div>
         </section>

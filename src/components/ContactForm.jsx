@@ -1,5 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { RiServiceLine } from "react-icons/ri";
+import { LuPhoneCall } from "react-icons/lu";
+import { MdOutlineMiscellaneousServices, MdErrorOutline } from "react-icons/md";
+import { HiOutlineTicket } from "react-icons/hi";
+import { IoIosCheckmarkCircle } from "react-icons/io";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -16,97 +21,207 @@ const ContactForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus("Submitting...");
 
         try {
             const response = await axios.post("http://localhost:2000/contact", formData);
             setFormData({ name: "", email: "", message: "" });
-            setStatus("Success! Thank You for your Message");
+            setStatus({ message: "Success! Thank You for your Message", type: "success" });
+
+            setTimeout(() => {
+                setStatus(null);
+            }, 3000);
         } catch (error) {
-            setStatus("Error! Something Went Wrong");
+            setStatus({ message: "Error! Somthing Went Wrong.", type: "error" });
             console.log("Error Submitting Form", error);
+
+            setTimeout(() => {
+                setStatus(null);
+            }, 3000);
         }
     };
     return (
         <div className="min-h-screen flex items-center justify-center">
-            <section className=" body-font relative">
-            <h1
-                className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold"
-                data-aos="fade-down"
-                id="Team"
-            >
-                Contact Us
-            </h1>
-                <div className="container px-5 py-3 mx-auto flex sm:flex-nowrap flex-wrap">
-                    <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            className="absolute inset-0"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119270.56240544704!2d77.67934468377031!3d20.904067449823263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a4a67774bc15%3A0x3c7b3f78ca4f9635!2sAmravati%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1742299741559!5m2!1sen!2sin"
-                        ></iframe>
-                        <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
-                            <div className="lg:w-1/2 px-6">
-                                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-                                <p className="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+            <section className="relative">
+                <h1
+                    className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold"
+                    data-aos="fade-down"
+                    id="Team"
+                >
+                    Contact Us
+                </h1>
+
+                <div className="container my-12 mx-auto px-2 md:px-4">
+                    <section>
+                        <div className="flex flex-wrap">
+                            <form
+                                onSubmit={handleSubmit}
+                                className="w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6"
+                            >
+                                {status?.type === "success" && (
+                                    <div
+                                        data-aos="zoom-in"
+                                        className="mb-4 flex w-full max-w-sm overflow-hidden rounded-lg bg-customMediumGreen text-lg"
+                                    >
+                                        <div className="flex items-center justify-center w-12 bg-white">
+                                            <IoIosCheckmarkCircle className="text-3xl text-customMediumGreen" />
+                                        </div>
+
+                                        <div className="px-4 py-2 -mx-3">
+                                            <div className="mx-3">
+                                                <span className="font-semibold text-emerald-500 dark:text-emerald-400">
+                                                    Success
+                                                </span>
+                                                <p className="text-sm text-gray-600 dark:text-gray-200">{status.message}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {status?.type === "error" && (
+                                    <div
+                                        data-aos="zoom-in"
+                                        className="mb-4 flex w-full max-w-sm overflow-hidden bg-red-700 rounded-lg text-lg"
+                                    >
+                                        <div className="flex items-center justify-center w-12 bg-white">
+                                            <MdErrorOutline className="text-red-700 text-3xl" />
+                                        </div>
+
+                                        <div className="px-4 py-2 -mx-3">
+                                            <div className="mx-3">
+                                                <span className="font-semibold text-white">Error</span>
+                                                <p className="text-sm text-gray-600 dark:text-gray-200">{status.message}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                <div className="mb-3 w-full">
+                                    <label className="block font-medium mb-[2px] text-customLightOrange text-lg">
+                                        Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
+                                        className="px-2 py-2 border w-full outline-none rounded-md text-white placeholder:text-white"
+                                        placeholder="Enter your name"
+                                    />
+                                </div>
+
+                                <div className="mb-3 w-full">
+                                    <label className="block font-medium mb-[2px]  text-customLightOrange text-lg">
+                                        Email
+                                    </label>
+                                    <input
+                                        className="px-2 py-2 border w-full outline-none rounded-md text-white placeholder:text-white"
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="Enter your email address"
+                                    />
+                                </div>
+
+                                <div className="mb-3 w-full">
+                                    <label className="block font-medium mb-[2px]  text-customLightOrange text-lg">
+                                        Message
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        rows="5"
+                                        cols="50"
+                                        placeholder="Type here..."
+                                        className="px-2 py-2 border rounded-[5px] w-full outline-none placeholder:text-white text-white"
+                                    ></textarea>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    className="mb-6 inline-block w-full rounded bg-teal-400 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-teal-500"
+                                >
+                                    Send
+                                </button>
+                            </form>
+
+                            <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
+                                <div className="flex flex-wrap">
+                                    <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                                        <div className="flex items-start">
+                                            <div className="shrink-0">
+                                                <div className="inline-block rounded-md p-4 text-3xl text-customLightOrange">
+                                                    <LuPhoneCall />
+                                                </div>
+                                            </div>
+                                            <div className="ml-6 grow">
+                                                <p className="mb-2 text-lg text-customeWhite font-bold font-subhead tracking-wider">
+                                                    Customer Service
+                                                </p>
+                                                <p className="text-customLightGreen font-para">animaziahelp203@gmail.com</p>
+                                                <p className="text-customLightGreen  font-subhead">+91 8954248907</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                                        <div className="flex items-start">
+                                            <div className="shrink-0">
+                                                <div className="inline-block rounded-md text-4xl text-customLightOrange p-4">
+                                                    <RiServiceLine />
+                                                </div>
+                                            </div>
+                                            <div className="ml-6 grow">
+                                                <p className="mb-2 text-lg text-customeWhite font-bold font-subhead tracking-wider">
+                                                    Donations
+                                                </p>
+                                                <p className="text-customLightGreen font-para">supportus90@gmail.com</p>
+                                                <p className="text-customLightGreen  font-subhead">+91 90578980915</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                                        <div className="align-start flex">
+                                            <div className="shrink-0">
+                                                <div className="inline-block rounded-md  p-4 text-4xl text-customLightOrange">
+                                                    <MdOutlineMiscellaneousServices />
+                                                </div>
+                                            </div>
+                                            <div className="ml-6 grow">
+                                                <p className="mb-2 text-lg text-customeWhite font-bold font-subhead tracking-wider">
+                                                    Technical Support
+                                                </p>
+                                                <p className="text-customLightGreen font-para">techsupport@gmail.com</p>
+                                                <p className="text-customLightGreen  font-subhead">+91 785367289</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                                        <div className="align-start flex">
+                                            <div className="shrink-0">
+                                                <div className="inline-block rounded-md  p-4 text-4xl text-customLightOrange">
+                                                    <HiOutlineTicket />
+                                                </div>
+                                            </div>
+                                            <div className="ml-6 grow">
+                                                <p className="mb-2 text-lg text-customeWhite font-bold font-subhead tracking-wider">
+                                                    Booking Service
+                                                </p>
+                                                <p className="text-customLightGreen font-para">booking089@gmail.com</p>
+                                                <p className="text-customLightGreen  font-subhead">+91 8135672356</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-                                <a className="text-red-500 leading-relaxed">example@email.com</a>
-                                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-                                <p className="leading-relaxed">123-456-7890</p>
-                            </div>
                         </div>
-                    </div>
-                    <form onSubmit={handleSubmit} className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 md:px-15 mt-8 md:mt-0 rounded-xl">
-                        <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
-                        <p className="leading-relaxed mb-5 text-gray-600">
-                            Post-ironic portland shabby chic echo park, banjo fashion axe
-                        </p>
-                        <div className="relative mb-4">
-                            <label  className="leading-7 text-sm text-gray-600">
-                                Name
-                            </label>
-                            <input
-                                type="text" id="name" name="name" value={formData.name} onChange={handleChange} required
-                                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                            />
-                        </div>
-                        <div className="relative mb-4">
-                            <label  className="leading-7 text-sm text-gray-600">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                            />
-                        </div>
-                        <div className="relative mb-4">
-                            <label className="leading-7 text-sm text-gray-600">
-                                Message
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                            ></textarea>
-                        </div>
-                        <button type="submit" className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
-                            Button
-                        </button>
-                        <p className="text-xs text-gray-500 mt-3">
-                            Chicharrones blog helvetica normcore iceland tousled brook viral artisan.
-                        </p>
-                        {status && <p className="text-2xl">{status}</p>}
-                    </form>
+                    </section>
                 </div>
             </section>
         </div>

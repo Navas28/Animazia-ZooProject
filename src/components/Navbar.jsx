@@ -40,21 +40,28 @@ const Navbar = () => {
                     onClick={toggleMenu}
                     className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
                 >
-                    About
+                    Blog
                 </a>
                 <a
                     href="#Features"
                     onClick={toggleMenu}
                     className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
                 >
-                    Features
+                    Animals
                 </a>
                 <a
                     href="#Contact"
                     onClick={toggleMenu}
                     className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
                 >
-                    Contact
+                    Volunteer 
+                </a>
+                <a
+                    href="#Contact"
+                    onClick={toggleMenu}
+                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
+                >
+                    Events 
                 </a>
                 <a onClick={toggleMenu} className="block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg">
                     <button className="text-customeWhite sm:text-customeGreen bg-customeGreen sm:bg-customeWhite text-md rounded-md cursor-pointer border border-customeGreen outline-0 px-4">

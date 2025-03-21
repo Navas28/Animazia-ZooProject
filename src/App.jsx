@@ -15,6 +15,8 @@ import Booking from "./components/Booking";
 import Success from "./components/payment/Success";
 import Cancel from "./components/payment/Cancel";
 import ContactForm from "./components/ContactForm";
+import BookingHour from "./components/BookingHour";
+import Footer from "./components/Footer";
 
 const App = () => {
     useEffect(() => {
@@ -38,6 +40,8 @@ const App = () => {
                             <Testimonials />
                             <Booking />
                             <ContactForm/>
+                            <BookingHour/>
+                            <Footer/>
                         </>
                     }
                 />

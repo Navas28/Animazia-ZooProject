@@ -6,6 +6,7 @@ import { MdOutlineMiscellaneousServices, MdErrorOutline } from "react-icons/md";
 import { HiOutlineTicket } from "react-icons/hi";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
+
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: "",
@@ -40,7 +41,7 @@ const ContactForm = () => {
         }
     };
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="mt-15">
             <section className="relative">
                 <h1
                     className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold"
@@ -50,7 +51,7 @@ const ContactForm = () => {
                     Contact Us
                 </h1>
 
-                <div className="container my-12 mx-auto px-2 md:px-4">
+                <div className="container my-20 mx-auto px-2 md:px-4">
                     <section>
                         <div className="flex flex-wrap">
                             <form
@@ -146,7 +147,7 @@ const ContactForm = () => {
 
                                 <button
                                     type="submit"
-                                    className="mb-6 inline-block w-full rounded bg-teal-400 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-teal-500"
+                                    className="mb-6 inline-block w-full rounded bg-customLightOrange px-6 py-2.5 font-medium uppercase leading-normal text-white cursor-pointer"
                                 >
                                     Send
                                 </button>

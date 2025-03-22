@@ -3,6 +3,7 @@ import logoGreen from "../assets/images/logo-green.png";
 import logoWhite from "../assets/images/logo-off.png";
 import { TiThMenuOutline } from "react-icons/ti";
 import { IoCloseSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [stickyNavbar, setStickyNavbar] = useState(false);
@@ -28,41 +29,52 @@ const Navbar = () => {
                     menuIcon ? "right-0" : "right-[-100%]"
                 }`}
             >
-                <a 
+                <Link
                     href="#Home"
                     onClick={toggleMenu}
-                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
+                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
+                        stickyNavbar ? "text-black" : "sm:text-white"
+                    }`}
                 >
                     Home
-                </a>
-                <a
-                    href="#About"
+                </Link>
+                <Link
                     onClick={toggleMenu}
-                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
+                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
+                        stickyNavbar ? "text-black" : "sm:text-white"
+                    }`}
                 >
                     Blog
-                </a>
-                <a
-                    href="#Features"
+                </Link>
+
+                <Link
+                    to="/redlist"
                     onClick={toggleMenu}
-                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
+                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
+                        stickyNavbar ? "text-black" : "sm:text-white"
+                    }`}
                 >
-                    Animals
-                </a>
-                <a
+                    Red List
+                </Link>
+
+                <Link
                     href="#Contact"
                     onClick={toggleMenu}
-                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
+                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
+                        stickyNavbar ? "text-black" : "sm:text-white"
+                    }`}
                 >
-                    Volunteer 
-                </a>
-                <a
+                    Volunteer
+                </Link>
+                <Link
                     href="#Contact"
                     onClick={toggleMenu}
-                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${stickyNavbar ? 'text-black': 'sm:text-white'}`}
+                    className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
+                        stickyNavbar ? "text-black" : "sm:text-white"
+                    }`}
                 >
-                    Events 
-                </a>
+                    Events
+                </Link>
                 <a onClick={toggleMenu} className="block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg">
                     <button className="text-customeWhite sm:text-customeGreen bg-customeGreen sm:bg-customeWhite text-md rounded-md cursor-pointer border border-customeGreen outline-0 px-4">
                         Donate
@@ -70,11 +82,15 @@ const Navbar = () => {
                 </a>
                 <IoCloseSharp onClick={toggleMenu} className="sm:hidden cursor-pointer text-4xl absolute top-9 right-5" />
             </ul>
-            <TiThMenuOutline onClick={toggleMenu} className={`block sm:hidden cursor-pointer text-2xl ${stickyNavbar ? 'text-customeGreen' : 'text-customeWhite'}`} />
+            <TiThMenuOutline
+                onClick={toggleMenu}
+                className={`block sm:hidden cursor-pointer text-2xl ${
+                    stickyNavbar ? "text-customeGreen" : "text-customeWhite"
+                }`}
+            />
         </nav>
     );
 };
 
 export default Navbar;
 
-// transition 0.5 s and bg color

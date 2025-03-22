@@ -5,17 +5,17 @@ import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare } from "react-icon
 
 const Footer = () => {
     return (
-        <footer class="">
-            <div class="container mx-auto p-0 md:p-8 xl:px-0">
-                <div class="mx-auto max-w-7xl px-6 pb-10 pt-16">
-                    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                        <div class="space-y-4">
+        <footer className="">
+            <div className="container mx-auto p-0 md:p-8 xl:px-0">
+                <div className="mx-auto max-w-7xl px-6 pb-10 pt-16">
+                    <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+                        <div className="space-y-4">
                             <div>
-                                <div class="flex items-center space-x-2 text-2xl font-medium">
-                                    <span class="text-white">ANIMAZIA</span>
+                                <div className="flex items-center space-x-2 text-2xl font-medium">
+                                    <span className="text-white">ANIMAZIA</span>
                                 </div>
                             </div>
-                            <div class="max-w-md pr-16 text-md text-gray-200">
+                            <div className="max-w-md pr-16 text-md text-gray-200">
                                 203 Street - North <br />
                                 Gujarath, India - 4548503 <br />
                                 <div className="flex flex-row gap-3 mt-5">
@@ -27,21 +27,21 @@ const Footer = () => {
                                     animaziaorg@gmail.com
                                 </div>
                             </div>
-                            <div class="flex space-x-2 text-2xl text-white cursor-pointer">
+                            <div className="flex space-x-2 text-2xl text-white cursor-pointer">
                                 <AiFillFacebook />
                                 <AiFillInstagram />
                                 <AiFillTwitterSquare />
                             </div>
                         </div>
-                        <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-                            <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                            <div className="md:grid md:grid-cols-2 md:gap-8">
                                 <div>
-                                    <h3 class="text-md font-semibold leading-6 text-white">Quick Links</h3>
-                                    <ul role="list" class="mt-6 space-y-4">
+                                    <h3 className="text-md font-semibold leading-6 text-white">Quick Links</h3>
+                                    <ul role="list" className="mt-6 space-y-4">
                                         <li>
                                             <a
                                                 href="/aiplatform"
-                                                class="text-md leading-6 text-gray-300 hover:text-gray-50"
+                                                className="text-md leading-6 text-gray-300 hover:text-gray-50"
                                             >
                                                 Home
                                             </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                                         <li>
                                             <a
                                                 href="/aialgorithms"
-                                                class="text-md leading-6 text-gray-300 hover:text-gray-50"
+                                                className="text-md leading-6 text-gray-300 hover:text-gray-50"
                                             >
                                                 About
                                             </a>
@@ -57,20 +57,20 @@ const Footer = () => {
                                         <li>
                                             <a
                                                 href="/industryapplications"
-                                                class="text-md leading-6 text-gray-300 hover:text-gray-50"
+                                                className="text-md leading-6 text-gray-300 hover:text-gray-50"
                                             >
                                                 Contact
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="mt-10 md:mt-0">
-                                    <h3 class="text-md font-semibold leading-6 text-white">Use Cases</h3>
-                                    <ul role="list" class="mt-6 space-y-4">
+                                <div className="mt-10 md:mt-0">
+                                    <h3 className="text-md font-semibold leading-6 text-white">Use Cases</h3>
+                                    <ul role="list" className="mt-6 space-y-4">
                                         <li>
                                             <a
                                                 href="/predictiveanalysis"
-                                                class="text-md leading-6 text-gray-300 hover:text-gray-50"
+                                                className="text-md leading-6 text-gray-300 hover:text-gray-50"
                                             >
                                                 Predictive Analysis
                                             </a>
@@ -78,7 +78,7 @@ const Footer = () => {
                                         <li>
                                             <a
                                                 href="/customerexperience"
-                                                class="text-md leading-6 text-gray-300 hover:text-gray-50"
+                                                className="text-md leading-6 text-gray-300 hover:text-gray-50"
                                             >
                                                 Customer Experience
                                             </a>
@@ -86,7 +86,7 @@ const Footer = () => {
                                         <li>
                                             <a
                                                 href="/automation"
-                                                class="text-md leading-6 text-gray-300 hover:text-gray-50"
+                                                className="text-md leading-6 text-gray-300 hover:text-gray-50"
                                             >
                                                 Automation
                                             </a>
@@ -94,55 +94,55 @@ const Footer = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div className="md:grid md:grid-cols-2 md:gap-8">
                                 <div>
-                                    <h3 class="text-md font-semibold leading-6 text-white">Resources</h3>
-                                    <ul role="list" class="mt-6 space-y-4">
+                                    <h3 className="text-md font-semibold leading-6 text-white">Resources</h3>
+                                    <ul role="list" className="mt-6 space-y-4">
                                         <li>
-                                            <a href="/pricing" class="text-md leading-6 text-gray-300 hover:text-gray-50">
+                                            <a href="/pricing" className="text-md leading-6 text-gray-300 hover:text-gray-50">
                                                 Pricing
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/blog" class="text-md leading-6 text-gray-300 hover:text-gray-50">
+                                            <a href="/blog" className="text-md leading-6 text-gray-300 hover:text-gray-50">
                                                 Blog
                                             </a>
                                         </li>
                                         <li>
                                             <a
                                                 href="/casestudies"
-                                                class="text-md leading-6 text-gray-300 hover:text-gray-50"
+                                                className="text-md leading-6 text-gray-300 hover:text-gray-50"
                                             >
                                                 Case Studies
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/terms" class="text-md leading-6 text-gray-300 hover:text-gray-50">
+                                            <a href="/terms" className="text-md leading-6 text-gray-300 hover:text-gray-50">
                                                 Terms of Service
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/privacy" class="text-md leading-6 text-gray-300 hover:text-gray-50">
+                                            <a href="/privacy" className="text-md leading-6 text-gray-300 hover:text-gray-50">
                                                 Privacy Policy
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="mt-10 md:mt-0">
-                                    <h3 class="text-md font-semibold leading-6 text-white">Company</h3>
-                                    <ul role="list" class="mt-6 space-y-4">
+                                <div className="mt-10 md:mt-0">
+                                    <h3 className="text-md font-semibold leading-6 text-white">Company</h3>
+                                    <ul role="list" className="mt-6 space-y-4">
                                         <li>
-                                            <a href="/aboutus" class="text-md leading-6 text-gray-300 hover:text-gray-50">
+                                            <a href="/aboutus" className="text-md leading-6 text-gray-300 hover:text-gray-50">
                                                 About Us
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/careers" class="text-md leading-6 text-gray-300 hover:text-gray-50">
+                                            <a href="/careers" className="text-md leading-6 text-gray-300 hover:text-gray-50">
                                                 Careers
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/contactus" class="text-md leading-6 text-gray-300 hover:text-gray-50">
+                                            <a href="/contactus" className="text-md leading-6 text-gray-300 hover:text-gray-50">
                                                 Contact Us
                                             </a>
                                         </li>
@@ -151,8 +151,8 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
-                        <div class="text-md text-center text-white">Copyright © 2025 Animazia</div>
+                    <div className="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
+                        <div className="text-md text-center text-white">Copyright © 2025 Animazia</div>
                     </div>
                 </div>
             </div>

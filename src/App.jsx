@@ -17,6 +17,9 @@ import Cancel from "./components/payment/Cancel";
 import ContactForm from "./components/ContactForm";
 import BookingHour from "./components/BookingHour";
 import Footer from "./components/Footer";
+import RedList from "./components/pages/RedList";
+import AnimalDetail from "./components/pages/AnimalDetail";
+
 
 const App = () => {
     useEffect(() => {
@@ -45,6 +48,8 @@ const App = () => {
                         </>
                     }
                 />
+                <Route path="/redlist" element={<RedList/>} />
+                <Route path="/animal/:id" element={<AnimalDetail/>}/>
                 <Route path="/success" element={<Success />} />
                 <Route path="/cancel" element={<Cancel />} />
             </Routes>

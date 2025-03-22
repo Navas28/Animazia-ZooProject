@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const Stripe = require("stripe");
 require("dotenv").config();
+const Animal = require('../../models/AnimalSchema')
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -57,7 +58,9 @@ app.post("/payment", async (req, res) => {
 //    Contact Form Data Storing Using Mongo DB
 
 mongoose
-    .connect(process.env.MONGODB_URI)
+    .connect(process.env.MONGODB_URI, {
+        dbName: "WildAnimals" //  Animal data base
+    })
     .then(() => console.log("Mongo Db Connected"))
     .catch((err) => console.log("Mongo Db Connection Error", err));
 
@@ -78,6 +81,33 @@ app.post("/contact", async (req, res) => {
         res.status(400).json({ success: false, message: error.message });
     }
 });
+
+//     Fetch all animals from MongoDB
+
+app.get('/animals', async (req,res) => {
+    try{
+        const animals = await Animal.find();
+        res.json(animals)
+    }catch (err){
+        console.error('Error Fetching Animals')
+        res.status(500).json({ error: err.message })
+    }
+})
+
+//     Fetch single animal by ID
+
+app.get('/animals/:id', async (req,res) => {
+    try{
+        const animal = await Animal.findById(req.params.id)
+        if(!animal) {
+            return res.status(404).json({ message: "Animal Not Found"})
+        }
+        res.json(animal)
+    }catch (err) {
+        console.error('Error Fetching Animal', err)
+        res.status(500).json({ error: err.message})
+    }
+})
 
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);

@@ -17,12 +17,22 @@ const AnimalDetail = () => {
 
     
   return (
-    <div>
+    <div className='bg-white mt-28'>
           <h2>{animal.name}</h2>
-            <p><strong>Species:</strong> {animal.species}</p>
-            <p><strong>Status:</strong> {animal.status}</p>
-            <p><strong>Habitat:</strong> {animal.habitat}</p>
-            <img src={animal.image} alt={animal.name} width="300px" />
+            <p><strong>Status:</strong> {animal.status || "Not available"} </p>
+            <p><strong>Hieght:</strong> {animal.height || "Not available"}</p>
+            <p><strong>Weight:</strong> {animal.weight || "Not available"}</p>
+            <p><strong>Habitat:</strong> {animal.habitat || "Not available"}</p>
+            <p><strong>Places:</strong> {animal.places || "Not available"}</p>
+            <p><strong>Scientific Name:</strong> {animal.scientificName || "Not available"}</p>
+            <p><strong>Population:</strong> {animal.population || "Not available"}</p>
+            <p><strong>Description:</strong> {animal.description}</p>
+
+            <div>
+    {animal.moreImg?.map((img, index) => (
+      <img key={index} src={img} alt={`${animal.name} ${index + 1}`} width="300px" />
+    ))}
+  </div>
     </div>
   )
 }

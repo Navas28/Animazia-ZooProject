@@ -7,7 +7,6 @@ const Header = () => {
             <div className="flex flex-wrap">
                 <div className="w-full sm:w-8/12 ">
                     <div className="mx-auto h-full sm:p-10">
-                        <Navbar />
                         <header className=" px-4 sm:flex mt-20 items-center h-full lg:mt-0 mb-10 sm:mb-0">
                             <div className="w-full">
                                 <h1 className="text-4xl lg:text-6xl font-bold font-head text-customeWhite">

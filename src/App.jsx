@@ -20,12 +20,11 @@ import Footer from "./components/Footer";
 import RedList from "./components/pages/RedList";
 import AnimalDetail from "./components/pages/AnimalDetail";
 
-
 const App = () => {
     useEffect(() => {
         AOS.init({
-            duration: 1000, // Animation duration (in ms)
-            once: false, // Animation runs once (true/false)
+            duration: 1000,
+            once: false,
         });
     }, []);
     return (
@@ -35,6 +34,8 @@ const App = () => {
                     path="/"
                     element={
                         <>
+                            {" "}
+                            <Navbar />
                             <Header />
                             <About />
                             <Features />
@@ -42,14 +43,28 @@ const App = () => {
                             <Team />
                             <Testimonials />
                             <Booking />
-                            <ContactForm/>
-                            <BookingHour/>
-                            <Footer/>
+                            <ContactForm />
+                            <BookingHour />
+                            <Footer />
                         </>
                     }
                 />
-                <Route path="/redlist" element={<RedList/>} />
-                <Route path="/animal/:id" element={<AnimalDetail/>}/>
+                <Route
+                    path="/redlist"
+                    element={
+                        <>
+                            <Navbar /> <RedList />
+                        </>
+                    }
+                />
+                <Route
+                    path="/animal/:id"
+                    element={
+                        <>
+                            <Navbar /> <AnimalDetail />
+                        </>
+                    }
+                />
                 <Route path="/success" element={<Success />} />
                 <Route path="/cancel" element={<Cancel />} />
             </Routes>

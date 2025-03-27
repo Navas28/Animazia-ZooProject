@@ -39,12 +39,13 @@ const Navbar = () => {
                     Home
                 </Link>
                 <Link
+                    to={"/blog"}
                     onClick={toggleMenu}
                     className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
                         stickyNavbar ? "text-black" : "sm:text-white"
                     }`}
                 >
-                    Blog
+                    Eco Journal
                 </Link>
 
                 <Link

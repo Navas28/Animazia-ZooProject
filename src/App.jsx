@@ -19,6 +19,8 @@ import BookingHour from "./components/BookingHour";
 import Footer from "./components/Footer";
 import RedList from "./components/pages/RedList";
 import AnimalDetail from "./components/pages/AnimalDetail";
+import Blog from "./components/pages/Blog";
+import BlogDetails from "./components/pages/BlogDetails";
 
 const App = () => {
     useEffect(() => {
@@ -65,6 +67,22 @@ const App = () => {
                         </>
                     }
                 />
+                <Route
+                    path="/blog"
+                    element={
+                        <>
+                            <Navbar />
+                            <Blog />
+                        </>
+                    }
+                />
+                <Route path="/blog/:id"
+                element={
+                    <>
+                    <Navbar/>
+                    <BlogDetails/>
+                    </>
+                }/>
                 <Route path="/success" element={<Success />} />
                 <Route path="/cancel" element={<Cancel />} />
             </Routes>

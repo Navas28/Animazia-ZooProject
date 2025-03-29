@@ -2,9 +2,13 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const Stripe = require("stripe");
+const multer = require("multer")
+const path = require("path")
 require("dotenv").config();
 const Animal = require("../../models/AnimalSchema");
 const Blog = require("../../models/BlogSchema");
+const Contact = require("../../models/ContactSchema")
+const JobApplication = require("../../models/JobApplicationSchema")
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -13,6 +17,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json()); // Middleware
+app.use("/uploads", express.static("uploads"));
 
 //   Stripe Payment Integration
 
@@ -56,22 +61,16 @@ app.post("/payment", async (req, res) => {
     }
 });
 
-//    Contact Form Data Storing Using Mongo DB
+
 
 mongoose
     .connect(process.env.MONGODB_URI, {
-        dbName: "WildAnimals", //  Animal data base
+        dbName: "WildAnimals", 
     })
     .then(() => console.log("Mongo Db Connected"))
     .catch((err) => console.log("Mongo Db Connection Error", err));
 
-const contactShcema = new mongoose.Schema({
-    name: { type: String, required: true },
-    email: { type: String, required: true },
-    message: { type: String, required: true },
-});
-
-const Contact = mongoose.model("contact", contactShcema);
+//    Contact Form Data Storing Using Mongo DB
 
 app.post("/contact", async (req, res) => {
     try {
@@ -127,6 +126,48 @@ app.get("/blogs/:id", async (req, res) => {
     if (!blog) return res.status(404).json({ message: "Blog not found" });
     res.json(blog);
 });
+
+
+//     Job Application form
+
+const storage = multer.diskStorage({
+    destination: (req,file,callback) => {
+        callback(null, "uploads/")
+    },
+    filename: (req,file,callback) => {
+        callback(null, Date.now() + path.extname(file.originalname))
+    }
+});
+
+const upload = multer({
+    storage,
+    limits: { fileSize: 2 * 1024 * 1024}, // 2MB
+    fileFilter: (req,file,callback) => {
+        const allowedTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"]
+        if(allowedTypes.includes(file.mimetype)){
+            callback(null, true)
+        } else{
+            callback(new Error("Only PDF/DOCX files are allowed!"))
+        }
+    }
+})
+
+app.post("/job-apply", upload.single("resume"), async(req,res) => {
+    try {
+
+        if(!req.file){
+            return res.status(400).json({success: false, message: "Resume file is required"})
+        }
+        const newApplication = new JobApplication({
+            ...req.body,
+            resume: req.file.path
+        })
+        await newApplication.save()
+        res.status(201).json({ success: true, message: "Job Application Submitted"})
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message})
+    }
+})
 
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);

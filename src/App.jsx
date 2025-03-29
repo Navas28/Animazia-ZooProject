@@ -21,6 +21,8 @@ import RedList from "./components/pages/RedList";
 import AnimalDetail from "./components/pages/AnimalDetail";
 import Blog from "./components/pages/Blog";
 import BlogDetails from "./components/pages/BlogDetails";
+import Volunteer from "./components/pages/Volunteer";
+import VolunteerHead from "./components/pages/VolunteerHead";
 
 const App = () => {
     useEffect(() => {
@@ -76,13 +78,25 @@ const App = () => {
                         </>
                     }
                 />
-                <Route path="/blog/:id"
-                element={
-                    <>
-                    <Navbar/>
-                    <BlogDetails/>
-                    </>
-                }/>
+                <Route
+                    path="/blog/:id"
+                    element={
+                        <>
+                            <Navbar />
+                            <BlogDetails />
+                        </>
+                    }
+                />
+
+                <Route
+                    path="/volunteer"
+                    element={
+                        <>
+                            <Navbar />
+                            <Volunteer />
+                        </>
+                    }
+                />
                 <Route path="/success" element={<Success />} />
                 <Route path="/cancel" element={<Cancel />} />
             </Routes>

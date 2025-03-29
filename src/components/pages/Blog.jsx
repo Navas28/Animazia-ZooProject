@@ -17,7 +17,7 @@ const Blog = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {blogs.map((blog) => (
                     <Link key={blog._id} to={`/blog/${blog._id}`}>
-                        <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 p-8 pb-8 pt-80 sm:pt-48 lg:pt-80 shadow-lg cursor-pointer h-full">
+                        <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 p-8 pb-8 pt-80 sm:pt-48 lg:pt-80 shadow-lg cursor-pointer h-full hover:scale-102 duration-500 ease-in-out">
                             {blog.titleImage && (
                                 <img
                                     src={blog.titleImage}

@@ -27,7 +27,7 @@ const BlogDetails = () => {
 
                 {blog.images.length > 0 && (
                     <div className="p-6">
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             {blog.images.map((img, index) => (
                                 <div key={index} className="overflow-hidden rounded-lg">
                                     <img
@@ -43,7 +43,7 @@ const BlogDetails = () => {
 
                 <div className="grid md:grid-cols-1 gap-8 p-6">
                     <div>
-                        <p className="text-white font-para text-xl text-center leading-relaxed">
+                        <p className="text-white font-para sm:text-xl text-center leading-relaxed">
                             {blog.description || "No description available."}
                         </p>
                     </div>

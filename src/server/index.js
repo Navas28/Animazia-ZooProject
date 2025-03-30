@@ -9,6 +9,7 @@ const Animal = require("../../models/AnimalSchema");
 const Blog = require("../../models/BlogSchema");
 const Contact = require("../../models/ContactSchema")
 const JobApplication = require("../../models/JobApplicationSchema")
+const EventRegistration = require("../../models/EventRegistrationSchema")
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -61,6 +62,60 @@ app.post("/payment", async (req, res) => {
     }
 });
 
+
+app.post("/donation-payment", async (req, res) => {
+    const { donationType, amount, program, donorInfo } = req.body;
+    
+    if (!amount || amount <= 0) {
+        return res.status(400).json({ error: "Invalid donation amount" });
+    }
+    
+    try {
+        // Create a product for this donation
+        const product = await stripe.products.create({
+            name: `${program} ${donationType === 'monthly' ? 'Monthly' : 'One-time'} Donation`,
+            metadata: {
+                donorFirstName: donorInfo.firstName,
+                donorLastName: donorInfo.lastName,
+                donorEmail: donorInfo.email,
+                donorPhone: donorInfo.phone || '',
+                program: program
+            }
+        });
+        
+        // Create a price for the donation
+        const price = await stripe.prices.create({
+            product: product.id,
+            unit_amount: amount * 100, // Convert to cents
+            currency: "usd",
+            recurring: donationType === 'monthly' ? { interval: 'month' } : null
+        });
+
+        // Create a checkout session
+        const session = await stripe.checkout.sessions.create({
+            line_items: [
+                {
+                    price: price.id,
+                    quantity: 1,
+                },
+            ],
+            mode: donationType === 'monthly' ? 'subscription' : 'payment',
+            success_url: `${process.env.CLIENT_URL}/donation-success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${process.env.CLIENT_URL}/donation-cancel`,
+            customer_email: donorInfo.email,
+            metadata: {
+                donationType,
+                program,
+                donorName: `${donorInfo.firstName} ${donorInfo.lastName}`
+            }
+        });
+        
+        res.json({ url: session.url });
+    } catch (error) {
+        console.error("Stripe error:", error);
+        res.status(500).json({ error: error.message });
+    }
+});
 
 
 mongoose
@@ -168,6 +223,29 @@ app.post("/job-apply", upload.single("resume"), async(req,res) => {
         res.status(400).json({ success: false, message: error.message})
     }
 })
+
+//  Event Booking
+
+app.post("/event-register", async (req, res) => {
+    try {
+      const { name, email, phone, participants } = req.body;
+      if (!name || !email || !phone || !participants) {
+        return res.status(400).json({ error: "All fields are required" });
+      }
+  
+      const newEventRegistration = new EventRegistration({
+        name,
+        email,
+        phone,
+        participants,
+      });
+      await newEventRegistration.save();
+      res.status(201).json({ message: "Registration Successful" });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
 
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);

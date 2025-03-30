@@ -352,7 +352,7 @@ const Volunteer = () => {
                         </div>
                         <button
                             type="submit"
-                            className="w-full bg-white font-bold font-head text-2xl text-customeGreen py-2 rounded-md hover:bg-customLightOrange hover:text-white cursor-pointer hover:scale-102 ease-in-out duration-300"
+                            className="w-full bg-white font-bold font-head text-2xl text-customeGreen py-2 rounded-md hover:bg-customLightOrange hover:text-white cursor-pointer hover:scale-102 ease-in-out duration-500"
                         >
                             Apply
                         </button>

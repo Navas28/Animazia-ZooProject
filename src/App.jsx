@@ -23,6 +23,9 @@ import Blog from "./components/pages/Blog";
 import BlogDetails from "./components/pages/BlogDetails";
 import Volunteer from "./components/pages/Volunteer";
 import VolunteerHead from "./components/pages/VolunteerHead";
+import Events from "./components/pages/Events";
+import Donation from "./components/pages/Donation";
+import EventRegistration from "./components/pages/EventRegistration";
 
 const App = () => {
     useEffect(() => {
@@ -97,6 +100,34 @@ const App = () => {
                         </>
                     }
                 />
+                <Route
+                    path="/events"
+                    element={
+                        <>
+                            <Navbar />
+                            <Events />
+                        </>
+                    }
+                />
+                <Route
+                    path="/donation"
+                    element={
+                        <>
+                            <Navbar />
+                            <Donation />
+                        </>
+                    }
+                />
+                  <Route
+                    path="/eventRegister"
+                    element={
+                        <>
+                            <Navbar />
+                            <EventRegistration />
+                        </>
+                    }
+                />
+             
                 <Route path="/success" element={<Success />} />
                 <Route path="/cancel" element={<Cancel />} />
             </Routes>

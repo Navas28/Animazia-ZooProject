@@ -11,10 +11,10 @@ const Booking = () => {
         }
     };
     return (
-        <div>
+        <div id="TicketBooking">
              <h1
                 className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold"
-                data-aos="fade-down"  id="Booking"
+                data-aos="fade-down"
             >
                 Book Now
             </h1>
@@ -60,7 +60,7 @@ const Booking = () => {
                                 </li>
                                 <button
                                     onClick={() => buyFunction("standard")}
-                                    className="mt-8 block w-full bg-customeGreen rounded-md py-2 text-md font-semibold text-customLightOrange  text-center cursor-pointer"
+                                    className="mt-8 block w-full bg-customLightOrange rounded-md py-2 text-md font-semibold text-white  text-center cursor-pointer"
                                 >
                                     Book Now
                                 </button>
@@ -112,7 +112,7 @@ const Booking = () => {
                                 </li>
                                 <button
                                     onClick={() => buyFunction("premium")}
-                                    className="mt-8 block w-full bg-customeGreen rounded-md py-2 text-sm font-semibold text-customLightOrange text-center cursor-pointer"
+                                    className="mt-8 block w-full bg-customLightOrange rounded-md py-2 text-sm font-semibold text-white text-center cursor-pointer"
                                 >
                                     Book Now
                                 </button>
@@ -163,7 +163,7 @@ const Booking = () => {
                                 </li>
                                 <button
                                     onClick={() => buyFunction("vip")}
-                                    className="mt-8 block w-full bg-customeGreen rounded-md py-2 text-sm font-semibold text-customLightOrange text-center cursor-pointer"
+                                    className="mt-8 block w-full bg-customLightOrange rounded-md py-2 text-sm font-semibold text-white text-center cursor-pointer"
                                 >
                                     Book Now
                                 </button>
@@ -215,7 +215,7 @@ const Booking = () => {
                                 </li>
                                 <button
                                     onClick={() => buyFunction("deluxe")}
-                                    className="mt-8 block w-full bg-customeGreen rounded-md py-2 text-sm font-semibold text-customLightOrange text-center cursor-pointer"
+                                    className="mt-8 block w-full bg-customLightOrange rounded-md py-2 text-sm font-semibold text-white text-center cursor-pointer"
                                 >
                                     Book Now
                                 </button>

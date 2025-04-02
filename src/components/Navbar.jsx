@@ -30,7 +30,7 @@ const Navbar = () => {
                 }`}
             >
                 <Link
-                    to={"/"}
+                    to="/"
                     onClick={toggleMenu}
                     className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
                         stickyNavbar ? "text-black" : "sm:text-white"
@@ -39,7 +39,7 @@ const Navbar = () => {
                     Home
                 </Link>
                 <Link
-                    to={"/blog"}
+                    to="/blog"
                     onClick={toggleMenu}
                     className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
                         stickyNavbar ? "text-black" : "sm:text-white"
@@ -59,7 +59,7 @@ const Navbar = () => {
                 </Link>
 
                 <Link
-                    to={"/volunteer"}
+                    to="/volunteer"
                     onClick={toggleMenu}
                     className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
                         stickyNavbar ? "text-black" : "sm:text-white"
@@ -68,7 +68,7 @@ const Navbar = () => {
                     Volunteer
                 </Link>
                 <Link
-                    to={"/events"}
+                    to="/events"
                     onClick={toggleMenu}
                     className={`block my-10 mx-6 sm:inline-block sm:my-1.5 sm:mx-3 lg:mx-5 text-lg ${
                         stickyNavbar ? "text-black" : "sm:text-white"

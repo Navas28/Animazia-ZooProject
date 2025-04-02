@@ -13,10 +13,10 @@ import mission6 from "../assets/images/mission-Tours.jpg";
 
 const Mission = () => {
     return (
-        <div>
+        <div id="Mission">
              <h1
                 className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold mb-8"
-                data-aos="fade-down"  id="Mission"
+                data-aos="fade-down" 
             >
                 Programs
             </h1>

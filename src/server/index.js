@@ -10,6 +10,7 @@ const Blog = require("../../models/BlogSchema");
 const Contact = require("../../models/ContactSchema")
 const JobApplication = require("../../models/JobApplicationSchema")
 const EventRegistration = require("../../models/EventRegistrationSchema")
+const Subscriber = require("../../models/Subscriber")
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -19,6 +20,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json()); // Middleware
 app.use("/uploads", express.static("uploads"));
+app.use(express.urlencoded({ extended: true }));
 
 //   Stripe Payment Integration
 
@@ -61,62 +63,6 @@ app.post("/payment", async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-
-
-app.post("/donation-payment", async (req, res) => {
-    const { donationType, amount, program, donorInfo } = req.body;
-    
-    if (!amount || amount <= 0) {
-        return res.status(400).json({ error: "Invalid donation amount" });
-    }
-    
-    try {
-        // Create a product for this donation
-        const product = await stripe.products.create({
-            name: `${program} ${donationType === 'monthly' ? 'Monthly' : 'One-time'} Donation`,
-            metadata: {
-                donorFirstName: donorInfo.firstName,
-                donorLastName: donorInfo.lastName,
-                donorEmail: donorInfo.email,
-                donorPhone: donorInfo.phone || '',
-                program: program
-            }
-        });
-        
-        // Create a price for the donation
-        const price = await stripe.prices.create({
-            product: product.id,
-            unit_amount: amount * 100, // Convert to cents
-            currency: "usd",
-            recurring: donationType === 'monthly' ? { interval: 'month' } : null
-        });
-
-        // Create a checkout session
-        const session = await stripe.checkout.sessions.create({
-            line_items: [
-                {
-                    price: price.id,
-                    quantity: 1,
-                },
-            ],
-            mode: donationType === 'monthly' ? 'subscription' : 'payment',
-            success_url: `${process.env.CLIENT_URL}/donation-success?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url: `${process.env.CLIENT_URL}/donation-cancel`,
-            customer_email: donorInfo.email,
-            metadata: {
-                donationType,
-                program,
-                donorName: `${donorInfo.firstName} ${donorInfo.lastName}`
-            }
-        });
-        
-        res.json({ url: session.url });
-    } catch (error) {
-        console.error("Stripe error:", error);
-        res.status(500).json({ error: error.message });
-    }
-});
-
 
 mongoose
     .connect(process.env.MONGODB_URI, {
@@ -246,6 +192,52 @@ app.post("/event-register", async (req, res) => {
     }
   });
 
+//   Donation 
+
+app.post("/donate", async (req, res) => {
+    try {
+      const { amount } = req.body;
+  
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        line_items: [
+          {
+            price_data: {
+              currency: "inr",
+              product_data: { name: "Animazia Donation" },
+              unit_amount: amount * 100,
+            },
+            quantity: 1,
+          },
+        ],
+        mode: "payment",
+        success_url: "http://localhost:5173/success",
+        cancel_url: "http://localhost:5173/cancel",
+      });
+  
+      res.json({ url: session.url });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+//  Email Subscription
+
+app.post("/subscribe", async (req,res) => {
+    const {email} = req.body;
+
+    if(!email) return res.status(400).json({message: "Email is required"})
+
+        try {
+            const emailExists = await Subscriber.findOne({email})
+            if(emailExists) return res.json({message: "Already subscribed"})
+
+                await Subscriber.create({email})
+                res.json({message: "Subscribed successfully"})
+        } catch (error) {
+            res.status(500).json({message: "Error subscribing"})
+        }
+})
 
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);

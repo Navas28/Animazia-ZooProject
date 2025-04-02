@@ -41,7 +41,7 @@ const ContactForm = () => {
         }
     };
     return (
-        <div className="mt-15">
+        <div className="mt-15" id="ContactForm">
             <section className="relative">
                 <h1
                     className="text-customeWhite text-center font-head text-4xl md:text-6xl font-bold"
@@ -147,7 +147,7 @@ const ContactForm = () => {
 
                                 <button
                                     type="submit"
-                                    className="mb-6 inline-block w-full rounded bg-customLightOrange px-6 py-2.5 font-medium uppercase leading-normal text-white cursor-pointer"
+                                    className="mb-6 inline-block w-full rounded bg-white px-6 py-2.5 font-medium uppercase leading-normal text-customeGreen hover:scale-102 duration-500 ease-in-out hover:bg-customLightOrange hover:text-white cursor-pointer"
                                 >
                                     Send
                                 </button>

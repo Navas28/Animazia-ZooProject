@@ -11,10 +11,13 @@
     "start": "nodemon src/server/index.js"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^3.5.1",
+    "@stripe/stripe-js": "^6.1.0",
     "@tailwindcss/vite": "^4.0.9",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "axios": "^1.8.3",
+    "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "daisyui": "^5.0.0",
     "dotenv": "^16.4.7",

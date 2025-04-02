@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import bgImg from "../assets/images/hero-2.avif";
 const Header = () => {
     return (
@@ -20,8 +20,8 @@ const Header = () => {
                                     the animal kingdom up close. Every visit supports the protection and preservation of
                                     wildlife, ensuring a future where these incredible creatures continue to flourish.
                                 </p>
-                                <button className="bg-customeWhite text-customMediumGreen text-xl font-medium px-4 py-2 rounded cursor-pointer hover:scale-105 duration-500 ease-in-out hover:bg-customMediumGreen hover:text-customeWhite">
-                                    Donate
+                                <button className="bg-customeWhite text-customeGreen text-xl font-medium px-4 py-2 rounded cursor-pointer hover:scale-102 duration-500 ease-in-out hover:bg-customLightOrange hover:text-customeWhite font-para">
+                                    <Link to="/donation">Donate</Link>
                                 </button>
                             </div>
                         </header>

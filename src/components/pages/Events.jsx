@@ -119,96 +119,96 @@ const Events = () => {
             },
         ],
         completed: [
-          {
-            id: 11,
-            title: "Animal Enrichment Day",
-            description:
-              "Visitors participated in hands-on activities, helping zookeepers create enrichment toys and puzzles for animals. This event highlighted the importance of mental stimulation for animal well-being, allowing guests to observe how different species interact with their custom-made enrichments",
-            date: "March 10, 2025",
-            participants: 120,
-            image: animalDay,
-          },
-          {
-            id: 12,
-            title: "World Wildlife Day Celebration",
-            description:
-              "A day dedicated to wildlife conservation, featuring expert talks, interactive exhibits, and engaging activities for families. Visitors learned about endangered species, conservation programs, and ways they can contribute to protecting global biodiversity. Special workshops on sustainable living, eco-friendly crafts for kids",
-            date: "March 3, 2025",
-            participants: 350,
-            image: worldWildLife,
-          },
-          {
-            id: 13,
-            title: "Zoo Keeper For A Day",
-            description:
-              "Selected participants got an exclusive behind-the-scenes experience of a zookeeper’s daily routine. They assisted with feeding schedules, habitat maintenance, and even interacted with some of the zoo's friendly residents. A once-in-a-lifetime experience for wildlife enthusiasts! ",
-            date: "February 22, 2025",
-            participants: 25,
-            image: zooKeeper,
-          },
-          {
-            id: 14,
-            title: "Valentine's Day Special Tour",
-            description:
-              "A romantic evening tour featuring animals with unique courtship rituals. Guests learned about species known for lifelong partnerships, including penguins, wolves, and swans. The event ended with a candle-lit dinner and exclusive photo opportunities with zoo ambassadors.",
-            date: "February 14, 2025",
-            participants: 46,
-            image: zooTour,
-          },
-          {
-            id: 15,
-            title: "Winter Wildlife Festival",
-            description:
-              "A celebration of animals that thrive in cold climates! Guests enjoyed live demonstrations featuring Arctic foxes, snow leopards, and reindeer. Special warm beverage stations, winter-themed crafts, and extended nighttime viewing of nocturnal species made it a magical winter experience.",
-            date: "January 28, 2025",
-            participants: 215,
-            image: winterWild,
-          },
-          {
-            id: 16,
-            title: "Penguin Awareness Weekend",
-            description:
-              "A fun and educational event focused on penguin conservation. Visitors attended feeding demonstrations, met conservation experts, and participated in an interactive penguin exhibit. Kids also had the opportunity to make penguin crafts and take part in a scavenger hunt",
-            date: "January 20, 2025",
-            participants: 180,
-            image: penquinDay,
-          },
-          {
-            id: 17,
-            title: "New Year's Eve Night Tour",
-            description:
-              "A special after-hours tour featuring animal encounters, guided night walks, and a midnight champagne toast under the stars. Guests learned about nocturnal animals and celebrated the New Year with a spectacular firework display over the zoo",
-            date: "December 31, 2024",
-            participants: 75,
-            image: zooNight,
-          },
-          {
-            id: 18,
-            title: "Holiday Lights Safari",
-            description:
-              "The zoo transformed into a glowing winter wonderland with thousands of twinkling lights. Visitors walked through beautifully illuminated trails, enjoyed seasonal treats, and watched special animal presentations. A festive experience for the whole family.",
-            date: "December 15-23, 2024",
-            participants: 1250,
-            image: lightsafari,
-          },
-          {
-            id: 19,
-            title: "Primate Conservation Symposium",
-            description:
-              "A scientific gathering featuring top researchers discussing the latest advancements in primate conservation. Attendees gained insight into habitat preservation, behavioral studies, and efforts to combat illegal wildlife trade. The event concluded with a Q&A session with conservationists.",
-            date: "November 18, 2024",
-            participants: 85,
-            image: primateSymposium,
-          },
-          {
-            id: 20,
-            title: "Boo at the Zoo",
-            description:
-              "An annual Halloween tradition featuring trick-or-treat stations, costume contests, and spooky-themed animal presentations. Guests learned about nocturnal creatures like owls and bats, while enjoying haunted trails and glow-in-the-dark decorations throughout the zoo.",
-            date: "October 29-31, 2024",
-            participants: 980,
-            image: boozoo,
-          },
+            {
+                id: 11,
+                title: "Animal Enrichment Day",
+                description:
+                    "Visitors participated in hands-on activities, helping zookeepers create enrichment toys and puzzles for animals. This event highlighted the importance of mental stimulation for animal well-being, allowing guests to observe how different species interact with their custom-made enrichments",
+                date: "March 10, 2025",
+                participants: 120,
+                image: animalDay,
+            },
+            {
+                id: 12,
+                title: "World Wildlife Day Celebration",
+                description:
+                    "A day dedicated to wildlife conservation, featuring expert talks, interactive exhibits, and engaging activities for families. Visitors learned about endangered species, conservation programs, and ways they can contribute to protecting global biodiversity. Special workshops on sustainable living, eco-friendly crafts for kids",
+                date: "March 3, 2025",
+                participants: 350,
+                image: worldWildLife,
+            },
+            {
+                id: 13,
+                title: "Zoo Keeper For A Day",
+                description:
+                    "Selected participants got an exclusive behind-the-scenes experience of a zookeeper’s daily routine. They assisted with feeding schedules, habitat maintenance, and even interacted with some of the zoo's friendly residents. A once-in-a-lifetime experience for wildlife enthusiasts! ",
+                date: "February 22, 2025",
+                participants: 25,
+                image: zooKeeper,
+            },
+            {
+                id: 14,
+                title: "Valentine's Day Special Tour",
+                description:
+                    "A romantic evening tour featuring animals with unique courtship rituals. Guests learned about species known for lifelong partnerships, including penguins, wolves, and swans. The event ended with a candle-lit dinner and exclusive photo opportunities with zoo ambassadors.",
+                date: "February 14, 2025",
+                participants: 46,
+                image: zooTour,
+            },
+            {
+                id: 15,
+                title: "Winter Wildlife Festival",
+                description:
+                    "A celebration of animals that thrive in cold climates! Guests enjoyed live demonstrations featuring Arctic foxes, snow leopards, and reindeer. Special warm beverage stations, winter-themed crafts, and extended nighttime viewing of nocturnal species made it a magical winter experience.",
+                date: "January 28, 2025",
+                participants: 215,
+                image: winterWild,
+            },
+            {
+                id: 16,
+                title: "Penguin Awareness Weekend",
+                description:
+                    "A fun and educational event focused on penguin conservation. Visitors attended feeding demonstrations, met conservation experts, and participated in an interactive penguin exhibit. Kids also had the opportunity to make penguin crafts and take part in a scavenger hunt",
+                date: "January 20, 2025",
+                participants: 180,
+                image: penquinDay,
+            },
+            {
+                id: 17,
+                title: "New Year's Eve Night Tour",
+                description:
+                    "A special after-hours tour featuring animal encounters, guided night walks, and a midnight champagne toast under the stars. Guests learned about nocturnal animals and celebrated the New Year with a spectacular firework display over the zoo",
+                date: "December 31, 2024",
+                participants: 75,
+                image: zooNight,
+            },
+            {
+                id: 18,
+                title: "Holiday Lights Safari",
+                description:
+                    "The zoo transformed into a glowing winter wonderland with thousands of twinkling lights. Visitors walked through beautifully illuminated trails, enjoyed seasonal treats, and watched special animal presentations. A festive experience for the whole family.",
+                date: "December 15-23, 2024",
+                participants: 1250,
+                image: lightsafari,
+            },
+            {
+                id: 19,
+                title: "Primate Conservation Symposium",
+                description:
+                    "A scientific gathering featuring top researchers discussing the latest advancements in primate conservation. Attendees gained insight into habitat preservation, behavioral studies, and efforts to combat illegal wildlife trade. The event concluded with a Q&A session with conservationists.",
+                date: "November 18, 2024",
+                participants: 85,
+                image: primateSymposium,
+            },
+            {
+                id: 20,
+                title: "Boo at the Zoo",
+                description:
+                    "An annual Halloween tradition featuring trick-or-treat stations, costume contests, and spooky-themed animal presentations. Guests learned about nocturnal creatures like owls and bats, while enjoying haunted trails and glow-in-the-dark decorations throughout the zoo.",
+                date: "October 29-31, 2024",
+                participants: 980,
+                image: boozoo,
+            },
         ],
     };
     return (
@@ -258,7 +258,7 @@ const Events = () => {
                         </div>
 
                         <div className="p-5 md:w-2/3 flex flex-col justify-between">
-                            <di>
+                            <div>
                                 <h3 className="text-2xl font-bold font-para text-white mb-3">{event.title}</h3>
 
                                 <div className="flex items-center text-white mb-3">
@@ -276,17 +276,19 @@ const Events = () => {
                                 {activeTab === "completed" && (
                                     <div className="flex items-center text-gray-600 mb-3">
                                         <Users size={18} className="mr-2 text-customLightOrange" />
-                                        <span className="text-sm text-white font-subhead">{event.participants} Participants</span>
+                                        <span className="text-sm text-white font-subhead">
+                                            {event.participants} Participants
+                                        </span>
                                     </div>
                                 )}
 
                                 <p className="text-white tracking-wider my-3 text-sm font-para">{event.description}</p>
-                            </di>
+                            </div>
 
                             {activeTab === "upcoming" && (
                                 <button className="mt-2.5 inline-flex items-center justify-center font-medium  bg-white text-customeGreen w-3/12 py-2 rounded-lg hover:bg-customLightOrange hover:text-white hover:scale-102 duration-500 ease-in-out">
-                                    <Link to="/eventRegister">Book Now</Link> 
-                                    <ChevronRight size={16} className="ml-1" />
+                                    <Link to="/eventRegister">Book Now</Link>
+                                    <ChevronRight size={16} className="ml-1 hidden sm:block" />
                                 </button>
                             )}
                         </div>

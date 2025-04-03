@@ -187,7 +187,7 @@ const Volunteer = () => {
                             />
                             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                             <label
-                                for="username"
+                                htmlFor="username"
                                 className=" text-customLightOrange absolute -top-6 text-lg left-0 cursor-text peer-focus:text-lg peer-focus:-top-7 transition-all peer-focus:text-customLightGreen peer-placeholder-shown:top-1 peer-placeholder-shown:text-2xl font-head"
                             >
                                 Name
@@ -209,7 +209,7 @@ const Volunteer = () => {
                             />
                             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                             <label
-                                for="username"
+                                htmlFor="username"
                                 className="text-customLightOrange absolute -top-6 text-lg left-0 cursor-text peer-focus:text-lg peer-focus:-top-7 transition-all peer-focus:text-customLightGreen peer-placeholder-shown:top-1 peer-placeholder-shown:text-2xl font-head"
                             >
                                 Email
@@ -231,7 +231,7 @@ const Volunteer = () => {
                             />
                             {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                             <label
-                                for="username"
+                                htmlFor="username"
                                 className="text-customLightOrange absolute -top-6 text-lg left-0 cursor-text peer-focus:text-lg peer-focus:-top-7 transition-all peer-focus:text-customLightGreen peer-placeholder-shown:top-1 peer-placeholder-shown:text-2xl font-head"
                             >
                                 Phone
@@ -253,7 +253,7 @@ const Volunteer = () => {
                             />
                             {errors.address && <p className="text-red-500 text-sm mt-1">{errors.address}</p>}
                             <label
-                                for="username"
+                                htmlFor="username"
                                 className="text-customLightOrange absolute -top-6 text-lg left-0 cursor-text peer-focus:text-lg peer-focus:-top-7 transition-all peer-focus:text-customLightGreen peer-placeholder-shown:top-1 peer-placeholder-shown:text-2xl font-head"
                             >
                                 Address
@@ -266,7 +266,7 @@ const Volunteer = () => {
                                 value={formData.jobRole}
                                 onChange={handleChange}
                                 className={` border-b border-gray-300 py-1 focus:border-b-2 focus:border-customLightGreen transition-colors focus:outline-none peer bg-inherit w-full text-2xl  ${
-                                    formData.jobRole ? "text-white text-lg"  : "text-customLightOrange font-head "
+                                    formData.jobRole ? "text-white text-lg" : "text-customLightOrange font-head "
                                 }
                                 ${
                                     errors.jobRole
@@ -327,7 +327,7 @@ const Volunteer = () => {
                             />
                             {errors.qualification && <p className="text-red-500 text-sm mt-1">{errors.qualification}</p>}
                             <label
-                                for="qualification"
+                                htmlFor="qualification"
                                 className="text-customLightOrange absolute -top-6 text-lg left-0 cursor-text peer-focus:text-lg peer-focus:-top-7 transition-all peer-focus:text-customLightGreen peer-placeholder-shown:top-1 peer-placeholder-shown:text-2xl font-head"
                             >
                                 Qualification
@@ -335,7 +335,7 @@ const Volunteer = () => {
                         </div>
 
                         <div className="mx-auto">
-                            <label for="example1" className="mb-1 block text-2xl font-head text-customLightOrange">
+                            <label htmlFor="example1" className="mb-1 block text-2xl font-head text-customLightOrange">
                                 Upload file
                             </label>
                             <input

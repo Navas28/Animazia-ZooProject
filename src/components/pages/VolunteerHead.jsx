@@ -89,25 +89,25 @@ const VolunteerHead = () => {
 
     return (
         <div>
-            <section class="py-10 pt-28">
-                <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
-                    <div class="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
-                        <div class="pr-12 sm:pr-0">
-                            <div class="relative max-w-xs mb-12">
-                                <img class="object-bottom rounded-xl" src={cover1} />
+            <section className="py-10 pt-28">
+                <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+                    <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
+                        <div className="pr-12 sm:pr-0">
+                            <div className="relative max-w-xs mb-12">
+                                <img className="object-bottom rounded-xl" src={cover1} />
 
                                 <img
-                                    class="absolute origin-bottom-right scale-75 rounded-xl -bottom-12 -right-12"
+                                    className="absolute origin-bottom-right scale-75 rounded-xl -bottom-12 -right-12"
                                     src={cover2}
                                 />
                             </div>
                         </div>
 
                         <div>
-                            <h2 class="text-3xl font-bold leading-tight text-customeWhite sm:text-4xl lg:text-5xl font-head">
+                            <h2 className="text-3xl font-bold leading-tight text-customeWhite sm:text-4xl lg:text-5xl font-head">
                                 Join Our Team Make an Impact
                             </h2>
-                            <p class="mt-4 text-base leading-relaxed text-customLightGreen font-para sm:text-lg">
+                            <p className="mt-4 text-base leading-relaxed text-customLightGreen font-para sm:text-lg">
                                 Looking for a rewarding career or volunteer opportunity? Join our team and contribute to
                                 wildlife conservation, education, and animal care. Whether you're seeking a full-time role
                                 or a chance to volunteer, we offer opportunities to make a difference. Explore available
@@ -118,35 +118,35 @@ const VolunteerHead = () => {
                 </div>
             </section>
 
-            <section class="py-10 sm:py-16 lg:py-8">
-                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 text-center sm:grid-cols-2 gap-y-8 lg:grid-cols-4 sm:gap-12">
+            <section className="py-10 sm:py-16 lg:py-8">
+                <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 text-center sm:grid-cols-2 gap-y-8 lg:grid-cols-4 sm:gap-12">
                         <div>
-                            <div class="flex items-center justify-center  mx-auto">
+                            <div className="flex items-center justify-center  mx-auto">
                                 <HeartPulse className="text-customLightOrange h-10 w-20 " />
                             </div>
-                            <h3 class="mt-8 text-lg font-semibold text-customeWhite">Health Insurance</h3>
+                            <h3 className="mt-8 text-lg font-semibold text-customeWhite">Health Insurance</h3>
                         </div>
 
                         <div>
-                            <div class="flex items-center justify-center   mx-auto ">
+                            <div className="flex items-center justify-center   mx-auto ">
                                 <Clock3 className="text-customLightOrange h-10 w-20 " />
                             </div>
-                            <h3 class="mt-8 text-lg font-semibold text-customeWhite">Flexible Work Schedule</h3>
+                            <h3 className="mt-8 text-lg font-semibold text-customeWhite">Flexible Work Schedule</h3>
                         </div>
 
                         <div>
-                            <div class="flex items-center justify-center  mx-auto">
+                            <div className="flex items-center justify-center  mx-auto">
                                 <BusFront className="text-customLightOrange h-10 w-20 " />
                             </div>
-                            <h3 class="mt-8 text-lg font-semibold text-customeWhite">Transportation Allowance</h3>
+                            <h3 className="mt-8 text-lg font-semibold text-customeWhite">Transportation Allowance</h3>
                         </div>
 
                         <div>
-                            <div class="flex items-center justify-center mx-auto ">
+                            <div className="flex items-center justify-center mx-auto ">
                                 <Coffee className="h-10 w-20 text-customLightOrange" />
                             </div>
-                            <h3 class="mt-8 text-lg font-semibold text-customeWhite">Meal Allowance</h3>
+                            <h3 className="mt-8 text-lg font-semibold text-customeWhite">Meal Allowance</h3>
                         </div>
                     </div>
                 </div>

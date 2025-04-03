@@ -8,7 +8,7 @@ const RedList = () => {
     useEffect(() => {
         axios
             .get("http://localhost:2000/animals")
-            .then((response) => setThreatenedAnimals(response.data)) // No filtering
+            .then((response) => setThreatenedAnimals(response.data)) 
             .catch((error) => console.error("Error fetching animals:", error));
     }, []);
 

@@ -10,7 +10,7 @@ const EventRegistration = () => {
         email: "",
         phone: "",
         participants: 1,
-        specialRequests: "",
+        requests: "",
     });
 
     const [status, setStatus] = useState(null);
@@ -135,13 +135,13 @@ const EventRegistration = () => {
                     </div>
 
                     <div className="mt-6">
-                        <label htmlFor="specialRequests" className="block text-customLightOrange font-medium mb-2">
+                        <label htmlFor="requests" className="block text-customLightOrange font-medium mb-2">
                             Special Requests or Accommodations
                         </label>
                         <textarea
-                            id="specialRequests"
-                            name="specialRequests"
-                            value={formData.specialRequests}
+                            id="requests"
+                            name="requests"
+                            value={formData.requests}
                             onChange={handleChange}
                             rows="4"
                             className="w-full px-4 py-3 border border-customeWhite rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent text-white"

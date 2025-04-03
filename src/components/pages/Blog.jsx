@@ -26,7 +26,7 @@ const Blog = () => {
                                 />
                             )}
                             <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-800 via-gray-800/40"></div>
-                      
+
                             <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
                                 <time dateTime={blog.date} className="mr-8">
                                     {blog.date}
@@ -35,13 +35,10 @@ const Blog = () => {
                                     <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
                                         <circle cx="1" cy="1" r="1"></circle>
                                     </svg>
-                                    <div className="flex gap-x-2.5">
-                                        
-                                        {blog.author}
-                                    </div>
+                                    <div className="flex gap-x-2.5">{blog.author}</div>
                                 </div>
                             </div>
-                 
+
                             <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
                                 <span className="absolute inset-0"></span>
                                 {blog.title}

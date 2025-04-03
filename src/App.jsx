@@ -41,7 +41,6 @@ const App = () => {
                     path="/"
                     element={
                         <>
-                            {" "}
                             <Navbar />
                             <Header />
                             <About />

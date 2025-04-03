@@ -5,6 +5,7 @@ const eventRegistrationSchema = new mongoose.Schema({
     email: {type: String, required: true},
     phone: {type: String, required: true},
     participants: {type: Number, required: true},
+    requests: {type: String}
 })
 
 module.exports = mongoose.model("EventRegistration", eventRegistrationSchema)

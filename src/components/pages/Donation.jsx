@@ -89,7 +89,9 @@ const Donation = () => {
 
                             <div className="mt-6">
                                 <div className="flex items-center justify-between mb-2">
-                                    <label className="block text-sm font-medium text-customLightGreen font-para">Custom Amount</label>
+                                    <label className="block text-sm font-medium text-customLightGreen font-para">
+                                        Custom Amount
+                                    </label>
                                     <span className="text-xs text-customLightGreen">
                                         <span className="text-red-600">*</span> Minimum &#8377;50
                                     </span>
@@ -161,7 +163,7 @@ const Donation = () => {
                     <div className="mt-8 pt-6 border-t border-gray-100">
                         <div className="flex items-center justify-center space-x-2 mb-4">
                             <div className="p-2 bg-gray-100 rounded-full">
-                            <ShieldCheck className="text-customeGreen" />
+                                <ShieldCheck className="text-customeGreen" />
                             </div>
                             <span className="text-md text-white font-medium font-para">Secure Payment</span>
                         </div>

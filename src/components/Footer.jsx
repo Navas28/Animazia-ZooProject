@@ -16,7 +16,7 @@ const Footer = () => {
         setStatus(null);
 
         try {
-            const response = await axios.post("http://localhost:2000/subscribe", { email });
+            const response = await axios.post("https://backend-zoo.onrender.com/subscribe", { email });
             setStatus({ type: "success", message: response.data.message });
             setEmail("");
             setTimeout(() => setStatus(null), 3000);

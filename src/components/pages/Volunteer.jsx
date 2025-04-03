@@ -95,7 +95,7 @@ const Volunteer = () => {
                 form.append(key, formData[key]);
             }
             try {
-                const response = await axios.post("http://localhost:2000/job-apply", form, {
+                const response = await axios.post("https://backend-zoo.onrender.com/job-apply", form, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
 

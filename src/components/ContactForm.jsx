@@ -24,7 +24,7 @@ const ContactForm = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:2000/contact", formData);
+            const response = await axios.post("https://backend-zoo.onrender.com/contact", formData);
             setFormData({ name: "", email: "", message: "" });
             setStatus({ message: "Success! Thank You for your Message", type: "success" });
 

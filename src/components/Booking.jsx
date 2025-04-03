@@ -4,7 +4,7 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
 const Booking = () => {
     const buyFunction = async (bookingType) => {
-        let response = await axios.post("http://localhost:2000/ticketbooking/payment", { bookingType });
+        let response = await axios.post("https://backend-zoo.onrender.com/ticketbooking/payment", { bookingType });
 
         if (response && response.status === 200) {
             window.location.href = response.data.url;

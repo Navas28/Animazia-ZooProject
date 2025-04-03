@@ -8,7 +8,7 @@ const BlogDetails = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:2000/blogs/${id}`)
+            .get(`https://backend-zoo.onrender.com/blogs/${id}`)
             .then((res) => setBlog(res.data))
             .catch((err) => console.error("Error fetching blog details:", err));
     }, [id]);

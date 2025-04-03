@@ -29,7 +29,7 @@ const Donation = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch("http://localhost:2000/donate", {
+            const response = await fetch("https://backend-zoo.onrender.com/donate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ amount }),

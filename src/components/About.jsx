@@ -1,6 +1,5 @@
 import React from "react";
 
-// Import all images
 import animal1 from "../assets/images/animal-1.jpg";
 import animal2 from "../assets/images/animal-2.jpg";
 import animal3 from "../assets/images/animal-3.jpg";

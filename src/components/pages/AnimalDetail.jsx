@@ -15,7 +15,7 @@ const AnimalDetail = () => {
     useEffect(() => {
         const fetchAnimalDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:2000/animals/${id}`);
+                const response = await axios.get(`https://backend-zoo.onrender.com/animals/${id}`);
                 setAnimal(response.data);
             } catch (error) {
                 console.error("Error fetching animal details:", error);

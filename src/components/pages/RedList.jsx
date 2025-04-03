@@ -7,7 +7,7 @@ const RedList = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:2000/animals")
+            .get("https://backend-zoo.onrender.com/animals")
             .then((response) => setThreatenedAnimals(response.data)) 
             .catch((error) => console.error("Error fetching animals:", error));
     }, []);

@@ -22,7 +22,7 @@ const EventRegistration = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:2000/event-register", formData);
+            const response = await axios.post("https://backend-zoo.onrender.com/event-register", formData);
             setStatus({ type: "success", message: response.data.message });
 
             setFormData({ name: "", email: "", phone: "", participants: "" });

@@ -7,7 +7,7 @@ const Blog = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:2000/blogs")
+            .get("https://backend-zoo.onrender.com/blogs")
             .then((res) => setBlogs(res.data))
             .catch((err) => console.error("Error fetching blogs:", err));
     }, []);

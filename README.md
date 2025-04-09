@@ -5,18 +5,39 @@ Animazia is a modern, interactive, and fully functional full-stack zoo website t
 ## 🔗 Live Demo
 
 👉 [Visit Animazia Live](https://frontend-zoo.vercel.app/)
-
 ## 📸 Screenshots
+
+### 🏠 Home Page
 ![animazia-home](https://github.com/user-attachments/assets/ff95cbc5-9682-45ef-9713-5a81bb1c4d4c)
+
+### ℹ️ About Section
 ![animazia-about](https://github.com/user-attachments/assets/b607694b-d915-43cd-9903-2fcaa8c1e72a)
+
+### 🎟️ Ticket Booking
 ![Animazia-booking](https://github.com/user-attachments/assets/a48ddbd7-d22f-4cd7-827b-551a347338f0)
+
+### 📬 Contact Us Form
 ![Animazia-contact](https://github.com/user-attachments/assets/3aa08719-08e4-45ca-bd03-f7112d6e54bb)
+
+### 🌿 Eco Journal
 ![Animazia-journel](https://github.com/user-attachments/assets/3a9dc392-5bcb-497e-b5c0-ecf68773a1f4)
+
+### 🌿 Eco Journal – Details View
 ![Animazia-journeldetails](https://github.com/user-attachments/assets/e3c17e5d-3994-4049-91af-0b723ea2cd4f)
+
+### 🐘 Redlist – Endangered Animals
 ![Animazia-redlist](https://github.com/user-attachments/assets/f1ba84fb-9133-44bf-a616-13b91763aa37)
+
+### 🐾 Animal Detail Page
 ![Animazia-animaldetails](https://github.com/user-attachments/assets/7f22a134-b36f-49cb-bd6f-a34b2177b7de)
+
+### 🎉 Events Overview
 ![Animazia-events](https://github.com/user-attachments/assets/a8c22485-4d30-4dbb-bffc-172a4142c63b)
+
+### 📆 Event Booking
 ![Animazia-eventbooking](https://github.com/user-attachments/assets/e8712692-5891-4773-9776-7b86c5228fab)
+
+### 🙋 Volunteer Opportunities & Form
 ![Animazia-volunteer](https://github.com/user-attachments/assets/8186bad4-1def-4c49-babc-dc9532d8afca)
 
 

@@ -15,6 +15,7 @@ Animazia is a modern, interactive, and fully functional full-stack zoo website t
 ![Animazia-journeldetails](https://github.com/user-attachments/assets/e3c17e5d-3994-4049-91af-0b723ea2cd4f)
 ![Animazia-redlist](https://github.com/user-attachments/assets/f1ba84fb-9133-44bf-a616-13b91763aa37)
 ![Animazia-animaldetails](https://github.com/user-attachments/assets/7f22a134-b36f-49cb-bd6f-a34b2177b7de)
+![Animazia-events](https://github.com/user-attachments/assets/a8c22485-4d30-4dbb-bffc-172a4142c63b)
 ![Animazia-eventbooking](https://github.com/user-attachments/assets/e8712692-5891-4773-9776-7b86c5228fab)
 ![Animazia-volunteer](https://github.com/user-attachments/assets/8186bad4-1def-4c49-babc-dc9532d8afca)
 
